@@ -1,0 +1,125 @@
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT 
+	*
+FROM wp_aioseo_notifications
+WHERE 1 = 1 AND
+	`notification_name` = 'deprecated-filters'
+/* 1 = 1 */ made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Utils\Filter->flagDeprecated, AIOSEO\Plugin\Common\Models\Notification::getNotificationByName, AIOSEO\Plugin\Common\Utils\Database->run
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SHOW COLUMNS FROM `wp_aioseo_notifications` made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Utils\Filter->flagDeprecated, AIOSEO\Plugin\Common\Models\Notification::getNotificationByName, AIOSEO\Plugin\Common\Utils\Database->model, AIOSEO\Plugin\Common\Models\Model->__construct, AIOSEO\Plugin\Common\Models\Model->getColumns, AIOSEO\Plugin\Common\Utils\Database->execute
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT 
+	*
+FROM wp_aioseo_notifications
+WHERE 1 = 1 AND
+	`notification_name` = 'deprecated-filters-v2'
+/* 1 = 1 */ made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Utils\Filter->flagDeprecated, AIOSEO\Plugin\Common\Models\Notification::getNotificationByName, AIOSEO\Plugin\Common\Utils\Database->run
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SHOW COLUMNS FROM `wp_aioseo_notifications` made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Utils\Filter->flagDeprecated, AIOSEO\Plugin\Common\Models\Notification::getNotificationByName, AIOSEO\Plugin\Common\Utils\Database->model, AIOSEO\Plugin\Common\Models\Model->__construct, AIOSEO\Plugin\Common\Models\Model->getColumns, AIOSEO\Plugin\Common\Utils\Database->execute
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT *, CASE 
+WHEN `type` = 3 THEN 0
+WHEN `type` = 4 THEN 1
+WHEN `type` = 7 THEN 2
+WHEN `type` = 6 THEN 3
+WHEN `type` = 5 THEN 4
+WHEN `type` = 9 THEN 5
+WHEN `type` = 8 THEN 6
+WHEN `type` = 2 THEN 7
+WHEN `type` = 1 THEN 8
+ELSE 9999
+END AS `typeSort`, CASE 
+WHEN `type` = 3 THEN `parameters`
+WHEN `type` = 4 THEN `parameters`
+WHEN `type` = 1 THEN `IP`
+WHEN `type` = 9 THEN `IP`
+WHEN `type` = 5 THEN `IP`
+WHEN `type` = 6 THEN `IP`
+WHEN `type` = 7 THEN `IP`
+WHEN `type` = 2 THEN `IP`
+WHEN `type` = 8 THEN `IP`
+ELSE 9999
+END AS `detailSort`
+ FROM `wp_wfblocks7` WHERE `type` IN (4) AND (`expiration` = 0 OR `expiration` > UNIX_TIMESTAMP()) ORDER BY `typeSort` ASC, `id` DESC made by wfWAFIPBlocksController::synchronizeConfigSettings, wfBlock::patternBlocks, wfBlock::allBlocks
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT *, CASE 
+WHEN `type` = 3 THEN 0
+WHEN `type` = 4 THEN 1
+WHEN `type` = 7 THEN 2
+WHEN `type` = 6 THEN 3
+WHEN `type` = 5 THEN 4
+WHEN `type` = 9 THEN 5
+WHEN `type` = 8 THEN 6
+WHEN `type` = 2 THEN 7
+WHEN `type` = 1 THEN 8
+ELSE 9999
+END AS `typeSort`, CASE 
+WHEN `type` = 3 THEN `parameters`
+WHEN `type` = 4 THEN `parameters`
+WHEN `type` = 1 THEN `IP`
+WHEN `type` = 9 THEN `IP`
+WHEN `type` = 5 THEN `IP`
+WHEN `type` = 6 THEN `IP`
+WHEN `type` = 7 THEN `IP`
+WHEN `type` = 2 THEN `IP`
+WHEN `type` = 8 THEN `IP`
+ELSE 9999
+END AS `detailSort`
+ FROM `wp_wfblocks7` WHERE `type` IN (3) AND (`expiration` = 0 OR `expiration` > UNIX_TIMESTAMP()) ORDER BY `typeSort` ASC, `id` DESC made by wfWAFIPBlocksController::synchronizeConfigSettings, wfBlock::countryBlocks, wfBlock::allBlocks
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT *, CASE 
+WHEN `type` = 3 THEN 0
+WHEN `type` = 4 THEN 1
+WHEN `type` = 7 THEN 2
+WHEN `type` = 6 THEN 3
+WHEN `type` = 5 THEN 4
+WHEN `type` = 9 THEN 5
+WHEN `type` = 8 THEN 6
+WHEN `type` = 2 THEN 7
+WHEN `type` = 1 THEN 8
+ELSE 9999
+END AS `typeSort`, CASE 
+WHEN `type` = 3 THEN `parameters`
+WHEN `type` = 4 THEN `parameters`
+WHEN `type` = 1 THEN `IP`
+WHEN `type` = 9 THEN `IP`
+WHEN `type` = 5 THEN `IP`
+WHEN `type` = 6 THEN `IP`
+WHEN `type` = 7 THEN `IP`
+WHEN `type` = 2 THEN `IP`
+WHEN `type` = 8 THEN `IP`
+ELSE 9999
+END AS `detailSort`
+ FROM `wp_wfblocks7` WHERE `type` IN (1, 8, 9, 2, 5, 6) AND (`expiration` = 0 OR `expiration` > UNIX_TIMESTAMP()) ORDER BY `typeSort` ASC, `id` DESC made by wfWAFIPBlocksController::synchronizeConfigSettings, wfBlock::ipBlocks, wfBlock::allBlocks
+[30-Mar-2022 14:30:07 UTC] WordPress database error Commands out of sync; you can't run this command now for query SELECT *, CASE 
+WHEN `type` = 3 THEN 0
+WHEN `type` = 4 THEN 1
+WHEN `type` = 7 THEN 2
+WHEN `type` = 6 THEN 3
+WHEN `type` = 5 THEN 4
+WHEN `type` = 9 THEN 5
+WHEN `type` = 8 THEN 6
+WHEN `type` = 2 THEN 7
+WHEN `type` = 1 THEN 8
+ELSE 9999
+END AS `typeSort`, CASE 
+WHEN `type` = 3 THEN `parameters`
+WHEN `type` = 4 THEN `parameters`
+WHEN `type` = 1 THEN `IP`
+WHEN `type` = 9 THEN `IP`
+WHEN `type` = 5 THEN `IP`
+WHEN `type` = 6 THEN `IP`
+WHEN `type` = 7 THEN `IP`
+WHEN `type` = 2 THEN `IP`
+WHEN `type` = 8 THEN `IP`
+ELSE 9999
+END AS `detailSort`
+ FROM `wp_wfblocks7` WHERE `type` IN (7) AND (`expiration` = 0 OR `expiration` > UNIX_TIMESTAMP()) ORDER BY `typeSort` ASC, `id` DESC made by wfWAFIPBlocksController::synchronizeConfigSettings, wfBlock::lockouts, wfBlock::allBlocks
+[16-May-2022 11:39:26 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:28 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:29 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:29 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:31 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:31 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:31 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:31 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:40 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:42 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:42 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:52 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[16-May-2022 11:39:54 UTC] Auxin_Aq_Resize.process() error: Image file does not exist (or is not an image): /home/u593665750/domains/nearnft.club/public_html/wp-content/uploads/2022/05/photo_2022-05-16_16-21-38.jpg
+[17-May-2022 13:41:22 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 3.1.
+[17-May-2022 13:41:22 UTC] The Automattic\WooCommerce\Admin\API\Options::get_options function is deprecated since version 3.1.
